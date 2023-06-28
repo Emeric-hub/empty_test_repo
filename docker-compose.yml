@@ -3,6 +3,6 @@ services:
     image: nginx:stable-alpine3.17-slim
     ports:
       # HTTP 
-      - target: 8080
+      - target: 80
         published: ${SERVICE_PORT:-8099}
         protocol: tcp
