@@ -1,3 +1,5 @@
 services:
   hello_world:
-    image: hello-world
+    image: nginx:stable-alpine3.17-slim
+    ports:
+      - ${DATABASE_PORT}:80
