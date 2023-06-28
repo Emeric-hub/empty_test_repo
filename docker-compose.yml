@@ -2,4 +2,7 @@ VICEservices:
   hello_world:
     image: nginx:stable-alpine3.17-slim
     ports:
-      - ${SERVICE_PORT}:80
+      # HTTP 
+      - target: 8080
+        published: ${SERVICE_PORT:-8099}
+        protocol: tcp
